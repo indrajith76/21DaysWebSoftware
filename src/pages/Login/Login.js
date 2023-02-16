@@ -1,11 +1,12 @@
 import React from "react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { toast } from "react-hot-toast";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate("/");
 
   const signInHandler = (event) => {
     event.preventDefault();
@@ -19,6 +20,7 @@ const Login = () => {
         if (user) {
           toast.success("Login successfully.");
           form.reset();
+          navigate("/");
         }
       })
       .catch((err) => {

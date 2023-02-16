@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdOutlineDashboard, MdLogout } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const Sidebar = () => {
+  const { logOut } = useContext(AuthContext);
   const sidebarData = [
     { text: "Dashboard", link: "/", icon: <MdOutlineDashboard /> },
     { text: "Dashboard", link: "/", icon: <MdOutlineDashboard /> },
@@ -19,7 +21,7 @@ const Sidebar = () => {
         </li>
       ))}
       <li>
-        <button className="bg-red-600 text-white">
+        <button onClick={() => logOut()} className="bg-red-600 text-white">
           <MdLogout /> LogOut{" "}
         </button>
       </li>

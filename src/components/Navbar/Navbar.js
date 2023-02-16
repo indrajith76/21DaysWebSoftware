@@ -7,12 +7,16 @@ import { AuthContext } from "../../contexts/AuthProvider";
 
 const Navbar = () => {
   const [sidebarOn, setSidebarOn] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   return (
     <section>
       <div className="bg-slate-200 flex items-center justify-between px-5 py-3">
         <div className="flex items-center">
-          <label className="block lg:hidden" onClick={() => setSidebarOn(!sidebarOn)} htmlFor="my-drawer">
+          <label
+            className="block lg:hidden"
+            onClick={() => setSidebarOn(!sidebarOn)}
+            htmlFor="my-drawer"
+          >
             {sidebarOn ? <FiX /> : <FiMenu />}
           </label>
           <h2 className="text-2xl font-bold text-slate-800 ml-2">21Days</h2>
@@ -35,7 +39,7 @@ const Navbar = () => {
               <a>Item 2</a>
             </li>
             <li className="bg-red-600 text-white rounded-lg">
-              <button>
+              <button onClick={() => logOut()}>
                 LogOut <MdLogout />
               </button>
             </li>
