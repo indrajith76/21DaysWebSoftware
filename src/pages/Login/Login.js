@@ -35,14 +35,14 @@ const Login = () => {
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-900 font-medium mb-2"
               style={{ fontSize: 10 }}
               htmlFor="email"
             >
               Email
             </label>
             <input
-              className="w-full border border-gray-400 p-2 rounded-lg"
+              className="input w-full border border-gray-400 p-2 rounded-lg bg-white"
               type="email"
               id="email"
               name="email"
@@ -51,14 +51,14 @@ const Login = () => {
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-900 font-medium mb-2"
               style={{ fontSize: 10 }}
               htmlFor="password"
             >
               Password
             </label>
             <input
-              className="w-full border border-gray-400 p-2 rounded-lg"
+              className="w-full border border-gray-400 p-2 rounded-lg bg-white"
               type="password"
               id="password"
               name="password"

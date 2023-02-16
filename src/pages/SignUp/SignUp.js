@@ -48,7 +48,7 @@ const SignUp = () => {
               Name
             </label>
             <input
-              className="w-full border border-gray-400 p-2 rounded-lg"
+              className="w-full border border-gray-400 p-2 rounded-lg bg-white"
               type="text"
               id="name"
               name="name"
@@ -64,7 +64,7 @@ const SignUp = () => {
               Email
             </label>
             <input
-              className="w-full border border-gray-400 p-2 rounded-lg"
+              className="w-full border border-gray-400 p-2 rounded-lg bg-white"
               type="email"
               id="email"
               name="email"
@@ -80,7 +80,7 @@ const SignUp = () => {
               Password
             </label>
             <input
-              className="w-full border border-gray-400 p-2 rounded-lg"
+              className="w-full border border-gray-400 p-2 rounded-lg bg-white"
               type="password"
               id="password"
               name="password"
