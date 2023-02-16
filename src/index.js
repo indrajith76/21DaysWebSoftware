@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { authRouter } from "./router/authRouter";
-import { RouterProvider } from "react-router-dom";
-import { auth } from "./config/firebase";
-import { mainRouter } from "./router/mainRouter";
+import App from "./App";
+import AuthProvider from "./contexts/AuthProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={auth.currentUser ? mainRouter : authRouter} />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>
 );

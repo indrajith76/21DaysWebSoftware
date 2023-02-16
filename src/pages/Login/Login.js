@@ -1,19 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
+const Login = () => {
   return (
-    <div className="flex h-screen bg-black justify-center items-center">
+    <div className="flex h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 justify-center items-center">
       <div className="w-5/6 md:w-1/2 lg:w-1/3 bg-white p-6 rounded-lg shadow-lg">
-        <form onSubmit={handleSubmit}>
-          <div className="text-gray-900 text-3xl mb-8 font-bold">Signup</div>
+        <form>
+          <div className="text-gray-900 text-3xl mb-8 font-bold">Login</div>
 
           <div className="mb-4">
             <label
@@ -27,8 +20,6 @@ const Signup = () => {
               className="w-full border border-gray-400 p-2 rounded-lg"
               type="text"
               id="username"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -43,15 +34,12 @@ const Signup = () => {
               className="w-full border border-gray-400 p-2 rounded-lg"
               type="password"
               id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="text-center mt-4">
             Don't have an account?{" "}
             <Link
-              to="/login
-            "
+              to="/signup"
               className="text-indigo-500 hover:text-indigo-600"
             >
               Sign up
@@ -61,7 +49,7 @@ const Signup = () => {
             className="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600 w-full text-sm mt-5"
             type="submit"
           >
-            Signup
+            Login
           </button>
         </form>
       </div>
@@ -69,4 +57,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
